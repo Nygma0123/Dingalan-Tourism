@@ -123,6 +123,7 @@ body {
     border-radius: 0.75rem;
     font-weight: 600;
     text-decoration: none;
+    display: inline-block;
 }
 
 .btn-outline {
@@ -132,6 +133,11 @@ body {
     border-radius: 0.75rem;
     font-weight: 600;
     text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-full {
@@ -496,7 +502,6 @@ body {
     text-align: center;
 }
 
-/* Karaniwang sukat ng litrato para sa 4 na miyembro */
 .team-avatar-img {
     width: 80px;
     height: 80px;
@@ -507,7 +512,6 @@ body {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-/* Mas malaking sukat para sa Project Manager sa gitna */
 .team-avatar-leader {
     width: 120px;
     height: 120px;
@@ -519,7 +523,7 @@ body {
 }
 
 .card-leader {
-    background-color: #f0f9ff; /* Medyo kaunting highlight para sa gitna */
+    background-color: #f0f9ff;
     border-color: #bae6fd;
 }
 
@@ -541,16 +545,21 @@ body {
 .site-footer {
     background-color: #030712;
     color: #cbd5e1;
-    padding: 3rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .footer-grid {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-grid { 
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+        padding: 0 2rem;
+        gap: 3rem;
+    }
 }
 
 .footer-brand {
@@ -566,28 +575,44 @@ body {
 
 .footer-brand h3 {
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
 }
 
 .footer-brand p {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: #94a3b8;
-    margin-top: 0.5rem;
-    max-width: 28rem;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
+
+/* CONTACT INFO STYLING (Pinaliit at binigyan ng tamang spacing) */
+.footer-contact-info h4 {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact-info p {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 0.3rem;
+    line-height: 1.4;
 }
 
 .site-footer h4 {
     color: white;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    font-size: 0.875rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
 }
 
 .footer-links a {
@@ -601,8 +626,8 @@ body {
 
 .footer-bottom {
     border-top: 1px solid #1e293b;
-    margin-top: 2.25rem;
-    padding-top: 1.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem 2rem 0 2rem;
     font-size: 0.75rem;
     color: #64748b;
 }
