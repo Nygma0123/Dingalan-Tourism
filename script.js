@@ -1,7 +1,7 @@
 // DESTINATION DATA
 const destinations = [
     {
-        name: 'Poblacion',
+        name: 'Feeder Port',
         desc: 'Discover the town center and its nearby coastal views.',
         img: 'poblacion.png'
     },
@@ -11,7 +11,7 @@ const destinations = [
         img: 'aplaya.png'
     },
     {
-        name: 'Bato',
+        name: 'Butas na Bato',
         desc: 'See the natural rock formations and coastal scenery of Butas na Bato.',
         img: 'bato.png'
     },
@@ -32,7 +32,7 @@ const destinations = [
     }
 ];
 
-// TEAM MEMBER DATA (Naka-ayos na ayon sa gusto mo: Project Manager sa gitna)
+// TEAM MEMBER DATA
 const members = [
     {
         name: 'Santos, Josh Andrei B.',
@@ -48,7 +48,7 @@ const members = [
         name: 'Jintalan, Iya Marienel A.',
         role: 'Project Manager',
         img: 'iya.png',
-        isLeader: true // Siya ang nasa gitna at mas malaki
+        isLeader: true
     },
     {
         name: 'Manuzon, John Christian D.',
@@ -151,12 +151,11 @@ function chooseDestination(name) {
     }
 }
 
-// DISPLAY TEAM MEMBERS (May special design para sa Project Manager sa gitna)
+// DISPLAY TEAM MEMBERS
 const teamGrid = document.getElementById('teamGrid');
 if (teamGrid) {
     members.forEach(member => {
         const card = document.createElement('article');
-        // Kung siya ang leader/project manager, lalagyan natin ng special class para mas malaki
         card.className = member.isLeader ? 'card-team card-leader' : 'card-team';
 
         card.innerHTML = `
